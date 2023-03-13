@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="procesar.html" method="get">
+        <fieldset>
+            <legend>Controles del formulario</legend>
+            <label for="usuario">Usuario:</label>
+            <input type="text"
+            pattern="[A-Z][a-z]{5}"
+            title="Ingresar un nombre de máximo 5 letras" 
+            value="Paulo" 
+            id="usuario"
+            required
+            name="usuario"/>
+            <br>
+            <br>
+            <label for="correo">Correo:</label>
+            <input type="email"
+            size="40"
+            id="correo"
+            name="correo"
+            multiple
+            >
+            <br>
+            <br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel"
+            id="tel"
+            name="tel"
+            >
+
+
+
+
+        </fieldset>
+
+    </form>    
+</body>
+</html>
