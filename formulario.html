@@ -6,17 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="procesar.html" method="get">
+    <form action="procesar.html" method="post">
+        <!-- Opcional -->
         <fieldset>
             <legend>Controles del formulario</legend>
+            <!-- Recomendado -->
             <label for="usuario">Usuario:</label>
             <input type="text"
-            pattern="[A-Z][a-z]{5}"
+            pattern="[A-Za-z]{5}"
+            id="usuario"
+            name="usuario"
             title="Ingresar un nombre de máximo 5 letras" 
             value="Paulo" 
-            id="usuario"
+            placeholder="Ingrese dato"
             required
-            name="usuario"/>
+            />
             <br>
             <br>
             <label for="correo">Correo:</label>
@@ -32,13 +36,65 @@
             <input type="tel"
             id="tel"
             name="tel"
+            required
             >
+            <br>
+            <br>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <br>
+            <br>
+            <!-- Radio -->
+            <label for="joven">Joven</label>
+            <input type="radio" id="joven" name="edad" value="0-25">
+            <label for="adulto">Adulto</label>
+            <input type="radio" id="adulto" name="edad" value="26-55">
+            <label for="tercera">Tercera Edad</label>
+            <input type="radio" id="tercera" name="edad" value="más 55">
+            <br>
+            <br>
+
+            <label for="rango">Rango:</label>
+            <input type="range" id="ingreso" name="ingreso" min="1" max="10">
+
+            <br>
+            <br>
+            <label for="terminos">Terminos:</label>
+            <input type="checkbox" name="terminos" id="terminos">
+
+            <br>
+            <br>
+            <select id="pais" name="pais">
+                <option value="co">Colombia</option>
+                <option value="br" selected>Brasil</option>
+                <option value="ca" >Canadá</option>
+                <option value="ec">Ecuador</option>
+            </select>
+            <br>
+            <br>
+            <textarea name="datos" id="datos" cols="30" rows="10">                
+            </textarea>
+
+            <br>
+            <br>
+
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+
+            <button type="button" 
+            onclick="mostrarMensaje()">
+            Botón
+            </button>
 
 
+            <button type="button" id="otroBoton">
+            Botón 2
+            </button>
 
-
+            
         </fieldset>
-
     </form>    
+    <script src="programa.js"></script>
 </body>
 </html>
